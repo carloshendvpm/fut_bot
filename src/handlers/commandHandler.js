@@ -7,11 +7,11 @@ class CommandHandler {
     this.messageService = messageService;
     this.todosKeywords = ['!todos', '!all', '!everyone'];
   }
-
   initialize() {
     this.client.on('message', async (message) => {
-      if(!message || !this.todosKeywords.includes(message.body.toLowerCase())) return;
-      
+      if (!message || !this.todosKeywords.includes(message.body.toLowerCase()))
+        return;
+
       console.log(`Comando ${message.body} recebido`);
       await this.messageService.handleTodosCommand(message);
     });

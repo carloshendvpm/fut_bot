@@ -15,8 +15,7 @@ class EventHandler {
       console.log('Escaneie o QR Code abaixo com seu WhatsApp:');
       qrcode.generate(qr, { small: true });
     });
-
   }
 }
 
-module.exports = new EventHandler(); 
+module.exports = new EventHandler();
